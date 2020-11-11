@@ -52,13 +52,22 @@ header nav {
 
 header nav a {
     margin-left: 3.5vh;
-    color: #fff;
+    color: rgb(255, 255, 255, .6);
     text-decoration: none;
     text-align: center;
     padding: 5px;
     font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
     font-family: 'Noto Sans JP', sans-serif;
-    /* flex */
+}
+
+header nav a.active {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    padding-right: 10px;
+    border-right: #fff solid 1px;
 }
 
 
@@ -102,10 +111,16 @@ header nav a {
 }
 
 .main .home {
+    opacity: 0;
+    transition: opacity 0.5s linear 1s;
     padding-top: 9vh;
     /* flex */
     flex-basis: 80%;
     display: flex;
+}
+
+.main .home .loaded {
+    opacity: 1;
 }
 
 .main .home .item {
@@ -182,6 +197,7 @@ header nav a {
 
 .main .briefcase .gallery .column .img img {
     width: 99%;
+    cursor: pointer;
 }
 
 .main .briefcase .gb {
