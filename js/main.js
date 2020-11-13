@@ -3,7 +3,6 @@ window.addEventListener('load', () => {
     const link = document.querySelectorAll('#categories a');
     link.forEach((element) => {
         element.addEventListener('click', (event) => {
-            event.preventDefault();
             link.forEach((link) => link.classList.remove('active'));
             event.target.classList.add('active');
         })
